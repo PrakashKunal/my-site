@@ -4,17 +4,19 @@
             <div class="row">
                 <div class="col-4 form-group">
                     <label for="name">Name</label>
-                    <input type="text" id="name" class="form-control">
+                    <input type="text" id="name" class="form-control" #nameInput>
+                    
                 </div>
                 <div class="col-2 form-group">
                     <label for="quantity">Quantity</label>
-                    <input type="number" id="quantity" class="form-control">
+                    <input type="number" id="quantity" class="form-control" #quantityInput>
+                    
                 </div>
             </div>
             <div class="row">
                 <div class="col-4 d-flex justify-content-around">
-                    <button class="btn btn-success" type="submit">Add Ingredient</button>
-                    <button class="btn btn-primary" type="button">Clear</button>
+                    <button class="btn btn-success" type="submit" (click)="addIngredients()">Add Ingredient</button>
+                    <button class="btn btn-primary" type="button" (click)="clearForm()">Clear</button>
                 </div>
                 
             </div>

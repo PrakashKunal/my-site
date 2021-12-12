@@ -13,6 +13,8 @@ import { RecipedetailComponent } from './recipes/recipedetail/recipedetail.compo
 import { ShoppinglistComponent } from './shoppinglist/shoppinglist.component';
 import { ShoppingeditComponent } from './shoppinglist/shoppingedit/shoppingedit.component';
 
+import { RecipeService } from './recipes/recipe.service';
+import {ShoppinglistService} from './shoppinglist/shoppinglist.service'
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,7 +32,10 @@ import { ShoppingeditComponent } from './shoppinglist/shoppingedit/shoppingedit.
     FormsModule,
     RouterModule
   ],
-  providers: [],
+  providers: [
+    RecipeService,
+    ShoppinglistService,
+          ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
