@@ -30,7 +30,7 @@ import {ShoppinglistService} from './shoppinglist/shoppinglist.service'
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    RouterModule
+    AppRoutingModule
   ],
   providers: [
     RecipeService,
