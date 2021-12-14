@@ -8,12 +8,15 @@
         <ul class="list-group">
             <a class="list-group-item " style="cursor:pointer">
                 <span class="float-start">Ingredient</span>
-                <span class="float-middle" style="margin-left:-5rem;">Quantity</span>
+                <span class="float-middle" 
+                style="margin-left:-5rem;">Quantity</span>
             </a>
-            <a class="list-group-item " style="cursor:pointer" *ngFor="let ingredient of ingredients">
+            <a class="list-group-item " 
+               style="cursor:pointer" 
+               *ngFor="let ingredient of ingredients; let i=index">
                 <span class="float-start">{{ ingredient.ingredientname }}</span>
                 <span class="float-middle">{{ ingredient.quantity }}</span>
-                <span class="float-end"><button class="btn btn-danger">Remove</button></span>
+                <span class="float-end"><button class="btn btn-danger" (click)="deleteIngredientItem(i)">Remove</button></span>
             </a>
         </ul>
     </div>
